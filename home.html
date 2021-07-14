@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="index.js"></script>
+
+    <style>
+        * {
+            font-family: 'Sarabun', sans-serif;
+            font-size: 16px;
+            color: black;
+            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        .webname {
+            text-align: left;
+
+        }
+
+        .webnameEN {
+            font-weight: 600;
+            color: black;
+        }
+
+        .webnameTH {
+            font-weight: 600;
+            font-size: 16px;
+            color: gray;
+        }
+
+        .navigator {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navigatorbutton {
+            background-color: palegoldenrod;
+            font-weight: 400;
+            padding: 20px;
+            margin: auto;
+            text-align: center;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+        .navigatorbutton:hover {
+            background-color: goldenrod;
+        }
+
+        .mainfeature {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .patientbutton {
+            background-color: palevioletred;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+            width: 49%;
+            border-radius: 6px;
+        }
+
+        .patientbutton:hover {
+            background-color: pink;
+        }
+
+        .doctorbutton {
+            background-color: palegoldenrod;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px;
+            width: 49%;
+            border-radius: 6px;
+        }
+
+        .doctorbutton:hover {
+            background-color: goldenrod;
+        }
+
+        .messagecard {
+            background-color: white;
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+        }
+
+        .redmessage {
+            color: red;
+            background-color: transparent;
+        }
+
+        .helpresource {
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .smallbutton {
+            background-color: palegoldenrod;
+            padding: 4px;
+            border-radius: 6px;
+            margin-left: 10px;
+        }
+
+        .smallbutton:hover {
+            background-color: goldenrod;
+        }
+
+        .statscardrow {
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        .statscard {
+            background-color: white;
+            margin: auto;
+            width: 33%;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+        }
+
+        .statsmessage {
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            /* align-self: flex-end; */
+            /* vertical-align: text-bottom; */
+            margin-top: 10px;
+        }
+
+        .normalmessage {
+            background-color: transparent;
+            /* vertical-align: text-bottom; */
+        }
+
+        .statsnumber {
+            color: red;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: transparent;
+            margin-inline: 10px;
+            /* vertical-align: text-bottom; */
+
+        }
+
+        .dropdown {
+            background-color: palegoldenrod;
+            width: 80%;
+            padding: 8px;
+            border-radius: 6px;
+            display: flex;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .dropdown:hover {
+            background-color: goldenrod;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            top: 40px;
+            left: 0;
+            border-radius: 8px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .dropdown-content a {
+            padding: 12px;
+            text-decoration: none;
+            display: block;
+        }
+
+      
+
+        h1 {
+            margin: 0 0 0.25em;
+        }
+
+        /* Reset Select */
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            appearance: none;
+            outline: 0;
+            box-shadow: none;
+            border: 0 !important;
+            background: #2c3e50;
+            background-image: none;
+
+        }
+
+        /* Remove IE arrow */
+        select::-ms-expand {
+            display: none;
+        }
+
+        /* Custom Select */
+        .select {
+            position: relative;
+            display: flex;
+            width: 20em;
+            height: 3em;
+            line-height: 3;
+            background: #2c3e50;
+            overflow: hidden;
+            border-radius: .25em;
+        }
+
+        select {
+            flex: 1;
+            padding: 0 .5em;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Arrow */
+        .select::after {
+            content: '\25BC';
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 1em;
+            background: #34495e;
+            cursor: pointer;
+            pointer-events: none;
+            -webkit-transition: .25s all ease;
+            -o-transition: .25s all ease;
+            transition: .25s all ease;
+        }
+
+        /* Transition */
+        .select:hover::after {
+            color: #f39c12;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="webname">
+            <div class="webnameEN">
+                isickineedbed
+            </div>
+            <div class="webnameTH">
+                ผู้ป่วยโควิดหาเตียง
+            </div>
+        </div>
+        <div class="navigator">
+            <div class="navigatorbutton">
+                หน้าแรก
+            </div>
+            <div class="navigatorbutton">
+                ล็อคอิน
+            </div>
+        </div>
+    </div>
+
+    <div class="mainfeature">
+        <div class="patientbutton">
+            ฉันเป็นผู้ป่วยหาเตียง
+        </div>
+        <div class="doctorbutton">
+            ฉันเป็นเจ้าหน้าที่ต้องการดูข้อมูลผู้ป่วย
+        </div>
+    </div>
+
+    <div class="messagecard">
+        <div class="redmessage">
+            เราเป็นเพียงเว็บไซต์ตัวกลางที่ช่วยผู้ป่วยโควิดให้มาโพสหาเตียง,อาการป่วย,สิ่งของที่ต้องการ เท่านั้น
+            เราไม่สามารถช่วยท่านได้จนกว่าจะมีเจ้าหน้าที่เข้าเว็บไซต์มาโทรไปหาท่านเพื่อช่วยเหลือ
+        </div>
+        <div class="helpresource">
+            <div class="normalmessage">
+                เพจช่วยเหลือผู้ป่วยโควิดเพิ่มเติม
+            </div>
+            <div class="smallbutton">
+                หมอแล็บแพนด้า
+            </div>
+            <div class="smallbutton">
+                เส้นด้าย
+            </div>
+            <div class="smallbutton">
+                เราต้องรอด
+            </div>
+            <div class="smallbutton">
+                WEVOLUNTEER
+            </div>
+        </div>
+    </div>
+
+    <div class="statscardrow">
+        <div class="statscard">
+            <div class="normalmessage">
+                จำนวนผู้ป่วยที่กำลังรอเตียงบนเว็บไซต์
+            </div>
+            <div class="statsmessage">
+                <div class="normalmessage">
+                    จำนวน
+                </div>
+                <div class="statsnumber">
+                    300
+                </div>
+                <div class="normalmessage">
+                    คน
+                </div>
+            </div>
+        </div>
+        <div class="statscard">
+            <div class="normalmessage">
+                จำนวนผู้ป่วยรอเตียงที่มีอาการรุนแรง
+            </div>
+            <div class="statsmessage">
+                <div class="normalmessage">
+                    จำนวน
+                </div>
+                <div class="statsnumber">
+                    30
+                </div>
+                <div class="normalmessage">
+                    คน
+                </div>
+            </div>
+        </div>
+        <div class="statscard">
+            <div class="normalmessage">
+                จำนวนผู้ป่วยรอเตียงในกรุงเทพมหานคร
+            </div>
+            <div class="statsmessage">
+                <div class="normalmessage">
+                    จำนวน
+                </div>
+                <div class="statsnumber">
+                    200
+                </div>
+                <div class="normalmessage">
+                    คน
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <button onclick="myfunction()" class="dropbtn">
+            จังหวัด
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="#">กรุงเทพมหานคร</a>
+            <a href="#">ปทุมธานี</a>
+            <a href="#">นนทบุรี</a>
+            <a href="#">สมุทรสงคราม</a>
+            <a href="#">สมุทรปราการ</a>
+        </div>
+    </div>
+
+    <!-- <h1>Pure CSS Select</h1>
+    <div class="select">
+        <select name="slct" id="slct">
+            <option selected disabled>Choose an option</option>
+            <option value="1">Pure CSS</option>
+            <option value="2">No JS</option>
+            <option value="3">Nice!</option>
+        </select>
+    </div> -->
+
+</body>
+
+
+</html>
